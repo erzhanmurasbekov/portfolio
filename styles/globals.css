@@ -17,7 +17,25 @@
 .swiper-rtl .swiper-button-prev:after {
   color: #f13024;
 }
+body{
+  background-image: url("/site-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@keyframes ping-once {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 
+.animate-ping-once {
+  animation: ping-once 1s cubic-bezier(0, 0, 0.2, 1) forwards; /* Change the '1' to control the iteration count */
+}
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
@@ -43,9 +61,9 @@
   }
   .input,
   .textarea {
-    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
+    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent transition-all duration-300 border border-white/20 placeholder:text-white/30 placeholder:font-light;
   }
   .textarea {
-    @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
+    @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
 }
