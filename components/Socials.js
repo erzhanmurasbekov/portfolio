@@ -15,17 +15,23 @@ const Socials = () => {
     RiFacebookLine,
     RiDribbbleLine,
     RiBehanceLine,
-    RiPinterestLine
+    RiPinterestLine,
   ];
-  return <div className=" flex items-center gap-x-5 text-lg">
-    {icons.map((Icon)=>{
-      return <Link
-          href={""}
-          className="hover:text-accent transition-all duration-300"> <Icon/> </Link>
-      
-    })}
-    
-  </div>;
+  return (
+    <div className=" flex items-center gap-x-5 text-lg">
+      {icons.map((Icon, index) => {
+        return (
+          <Link
+            key={index}
+            href={""}
+            className="hover:text-accent transition-all duration-300">
+            {" "}
+            <Icon />{" "}
+          </Link>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Socials;
