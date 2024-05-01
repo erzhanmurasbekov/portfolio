@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 // icons
 import {
   FaHtml5,
@@ -26,18 +27,22 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key={uuidv4()} />,
+          <FaCss3 key={uuidv4()} />,
+          <FaJs key={uuidv4()} />,
+          <FaReact key={uuidv4()} />,
+          <SiNextdotjs key={uuidv4()} />,
+          <SiFramer key={uuidv4()} />,
+          <FaWordpress key={uuidv4()} />,
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key={uuidv4()} />,
+          <SiAdobexd key={uuidv4()} />,
+          <SiAdobephotoshop key={uuidv4()} />,
+        ],
       },
     ],
   },
