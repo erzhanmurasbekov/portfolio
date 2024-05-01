@@ -41,7 +41,7 @@ const aboutData = [
       },
     ],
   },
-  
+
   {
     title: "experience",
     info: [
@@ -59,7 +59,6 @@ const aboutData = [
       },
     ],
   },
-  
 ];
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";

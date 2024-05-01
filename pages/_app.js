@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <div className="hidden lg:block w-1/4">
-        <p className="absolute transform -rotate-90 bottom-2/4 ">
-          Nope I didn't forget this part )
+        <p className="absolute transform -rotate-90 bottom-2/4">
+          Nope I didn't forget this part
         </p>
       </div>
       <Layout>
