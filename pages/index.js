@@ -8,6 +8,10 @@ import Link from "next/link";
 
 import { fadeIn } from "../variants";
 const Home = () => {
+  const text = `Hi there! I'm Erzhan Murasbekov, a passionate front-end developer with a
+            keen eye for crafting captivating digital experiences. Welcome to my
+            corner of the web, where creativity meets functionality and
+            innovation drives every pixel.`;
   return (
     <div className="bg-primary/60 h-full">
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 ">
@@ -27,10 +31,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden">
-            Hi there! I'm Erzhan Murasbekov, a passionate front-end developer with a
-            keen eye for crafting captivating digital experiences. Welcome to my
-            corner of the web, where creativity meets functionality and
-            innovation drives every pixel.
+            {text}
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <Link href={"/work"}></Link>
