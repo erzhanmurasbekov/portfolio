@@ -99,9 +99,12 @@ const About = () => {
             animate="show"
             exit="hidden"
             className="z-10 max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            10 years ago, Ibegan freelancing as a Developer. Since then, Ive
-            done remote work for agencies, counsulted fro startups, and
-            collaborated on digital products for business and consumer use.
+            With a love for clean code and pixel-perfect designs, I specialize
+            in transforming ideas into interactive web applications that leave a
+            lasting impression. Whether it's building responsive layouts,
+            optimizing performance, or enhancing user experiences, I thrive on
+            turning challenges into opportunities to showcase my skills and
+            expertise.
           </motion.p>
           <div className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8">
             <motion.div

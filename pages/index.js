@@ -10,7 +10,6 @@ import { fadeIn } from "../variants";
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
-      
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 ">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto ">
           <motion.h1
@@ -28,15 +27,13 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Voluptatem, distinctio atque? Ratione labore voluptatibus architecto
-            praesentium. Impedit, autem accusantium commodi obcaecati dolorem
-            rem exercitationem quasi?
+            Hi there! I'm Erzhan Murasbekov, a passionate front-end developer with a
+            keen eye for crafting captivating digital experiences. Welcome to my
+            corner of the web, where creativity meets functionality and
+            innovation drives every pixel.
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
-            <Link href={"/work"}>
-              
-            </Link>
+            <Link href={"/work"}></Link>
           </div>
           <motion.div
             variants={fadeIn("down", 0.4)}

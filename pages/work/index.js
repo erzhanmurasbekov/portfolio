@@ -24,10 +24,13 @@ const Work = () => {
               animate={"show"}
               exit={"hidden"}
               className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
-              neque odit accusamus perspiciatis necessitatibus illum dolores
-              beatae velit! Reprehenderit, delectus tempore! Nesciunt quo odio,
-              nobis aliquid necessitatibus possimus enim ea!
+              Explore a curated selection of projects that showcase my expertise
+              and passion for front-end development. Each project reflects my
+              commitment to creating intuitive user interfaces, leveraging
+              modern technologies, and delivering exceptional user experiences.
+              From e-commerce platforms to personal portfolio websites, I've
+              tackled diverse challenges and collaborated with teams to bring
+              innovative ideas to life.
             </motion.p>
           </div>
           <motion.div
