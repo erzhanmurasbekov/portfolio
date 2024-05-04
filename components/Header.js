@@ -11,7 +11,7 @@ const quicksand = Roboto({
 });
 const Header = () => {
   const router = useRouter()
-  const [current,setCurrent] = useState('')
+  const [current,setCurrent] = useState('/')
   setTimeout(()=>{
     setCurrent(router.pathname)
   },1000)
