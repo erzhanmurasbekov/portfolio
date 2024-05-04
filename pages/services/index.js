@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
 const Services = () => {
+  const text = `As a front-end developer, I leverage the latest web technologies
+              and best practices to create seamless, intuitive interfaces that
+              engage and delight users. From HTML and CSS to JavaScript
+              frameworks like React, I'm constantly honing my craft
+              to stay at the forefront of web development trends.`;
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
@@ -25,10 +30,7 @@ const Services = () => {
               animate={"show"}
               exit={"hidden"}
               className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
-              neque odit accusamus perspiciatis necessitatibus illum dolores
-              beatae velit! Reprehenderit, delectus tempore! Nesciunt quo odio,
-              nobis aliquid necessitatibus possimus enim ea!
+              {text}
             </motion.p>
           </div>
           <motion.div

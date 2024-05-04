@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 // icons
 import {
   FaHtml5,
@@ -26,22 +27,26 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key={uuidv4()} />,
+          <FaCss3 key={uuidv4()} />,
+          <FaJs key={uuidv4()} />,
+          <FaReact key={uuidv4()} />,
+          <SiNextdotjs key={uuidv4()} />,
+          <SiFramer key={uuidv4()} />,
+          <FaWordpress key={uuidv4()} />,
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key={uuidv4()} />,
+          <SiAdobexd key={uuidv4()} />,
+          <SiAdobephotoshop key={uuidv4()} />,
+        ],
       },
     ],
   },
-  
+
   {
     title: "experience",
     info: [
@@ -59,7 +64,6 @@ const aboutData = [
       },
     ],
   },
-  
 ];
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
@@ -67,6 +71,12 @@ import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const text = `With a love for clean code and pixel-perfect designs, I specialize
+            in transforming ideas into interactive web applications that leave a
+            lasting impression. Whether it's building responsive layouts,
+            optimizing performance, or enhancing user experiences, I thrive on
+            turning challenges into opportunities to showcase my skills and
+            expertise.`;
   return (
     <div className="z-0 h-full bg-primary/30 py-32 text-center xl:text-left ">
       <Circles />
@@ -95,9 +105,7 @@ const About = () => {
             animate="show"
             exit="hidden"
             className="z-10 max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            10 years ago, Ibegan freelancing as a Developer. Since then, Ive
-            done remote work for agencies, counsulted fro startups, and
-            collaborated on digital products for business and consumer use.
+            {text}
           </motion.p>
           <div className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8">
             <motion.div

@@ -6,6 +6,8 @@ const Bulb = () => {
         src={"/bulb.png"}
         width={260}
         height={200}
+        key={13123123}
+        alt=""
         className="w-full h-full"
       />
     </div>
