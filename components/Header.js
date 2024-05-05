@@ -27,7 +27,7 @@ const Header = () => {
         current == "/"
           ? "bg-primary/60 bg-gradient-to-r from-primary/10 via-black/30 to-black/10"
           : "bg-primary/30"
-      } z-30 w-full flex items-center xl:px-0 xl:h-[90px]`}>
+      } z-30 w-full h-max flex items-center xl:px-0 xl:h-[90px]`}>
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-3 py-8">
           <Link className={`${quicksand.className} text-4xl`} href={"/"}>

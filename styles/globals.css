@@ -31,10 +31,19 @@ body{
     transform: scale(2);
     opacity: 0;
   }
+} 
+.custom-height {
+  height: calc(100vh - 220px);
 }
-
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+}
 .animate-ping-once {
-  animation: ping-once 1s cubic-bezier(0, 0, 0.2, 1) forwards; /* Change the '1' to control the iteration count */
+  animation: ping-once 1s cubic-bezier(0, 0, 0.2, 1) forwards; 
 }
 @layer base {
   body {
