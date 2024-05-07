@@ -32,10 +32,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30">
+    <div className="xl:h-full custom-height bg-primary/30">
       {showCheckmark && <EmailSent />}
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        <div className="flex flex-col w-full max-w-[700px]">
+      <div className="container overflow-y-auto custom-height mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+        <div className="flex pt-7 xl:py-0 flex-col w-full max-w-[700px]">
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
