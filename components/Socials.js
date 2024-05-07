@@ -1,31 +1,29 @@
 import Link from "next/link";
 import {
-  RiYoutubeLine,
   RiInstagramLine,
   RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
+  RiLinkedinLine
+  
 } from "react-icons/ri";
 
 const Socials = () => {
-  const icons = [
-    RiYoutubeLine,
-    RiInstagramLine,
-    RiFacebookLine,
-    RiDribbbleLine,
-    RiBehanceLine,
-    RiPinterestLine,
+  const links = [
+    { icon: RiInstagramLine, link: "https://www.instagram.com/murasbekov" },
+    {
+      icon: RiLinkedinLine,
+      link: "https://www.linkedin.com/in/erzhanmurasbekov/",
+    },
   ];
   return (
     <div className=" flex items-center gap-x-5 text-lg">
-      {icons.map((Icon, index) => {
+      {links.map(({icon:Icon,link}, index) => {
         return (
           <Link
+          target="_blank"
             key={index}
-            href={""}
-            className="hover:text-accent transition-all duration-300">
-            {" "}
+            href={link}
+            className="hover:text-accent cursor-pointer transition-all duration-300">
+            
             <Icon />{" "}
           </Link>
         );
