@@ -78,7 +78,7 @@ const About = () => {
             turning challenges into opportunities to showcase my skills and
             expertise.`;
   return (
-    <div className="z-0 h-full bg-primary/30 py-32 text-center xl:text-left ">
+    <div className="z-0 h-full bg-primary/30 xl:py-32 text-center xl:text-left ">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -88,7 +88,7 @@ const About = () => {
         className="z-0 hidden xl:flex absolute bottom-0 -left-[370px]">
         <Avatar className={""} />
       </motion.div>
-      <div className="z-10 my-4 container mx-auto h-full flex flex-col gap-y-6 items-center xl:flex-row gap-x-6">
+      <div className="z-10 container mx-auto custom-height overflow-y-auto flex flex-col gap-y-6 items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
