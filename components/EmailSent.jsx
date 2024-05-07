@@ -10,6 +10,7 @@ const EmailSent = () => {
         width={25}
         height={50}
         key={123123}
+        alt=""
       />
     </div>
   );
