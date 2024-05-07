@@ -88,7 +88,7 @@ const About = () => {
         className="z-0 hidden xl:flex absolute bottom-0 -left-[370px]">
         <Avatar className={""} />
       </motion.div>
-      <div className="z-10 container mx-auto custom-height overflow-y-auto pb-16 xl:pb-0 flex flex-col gap-y-6 items-center xl:flex-row gap-x-6">
+      <div className="z-10 container mx-auto custom-height overflow-y-auto pb-20 xl:pb-0 flex flex-col gap-y-6 items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
