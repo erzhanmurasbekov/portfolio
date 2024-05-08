@@ -33,7 +33,7 @@ const aboutData = [
           <FaReact key={uuidv4()} />,
           <SiNextdotjs key={uuidv4()} />,
           <SiFramer key={uuidv4()} />,
-          <FaWordpress key={uuidv4()} />,
+          
         ],
       },
       {
