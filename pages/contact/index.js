@@ -91,12 +91,12 @@ const Contact = () => {
               name="message"
               value={message}></textarea>
             <button
-              onClick={showAndHideCheckmark}
+              
               className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex justify-center items-center overflow-hidden hover:border-accent group">
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+              <span className=" translate-x-3.5 group-hover:-translate-y-[80%] group-hover:opacity-0 transition-all duration-500">
                 Lets talk
               </span>
-              <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
+              <BsArrowRight className="-translate-x-8 -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 text-[22px]" />
             </button>
           </motion.form>
         </div>
