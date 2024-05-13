@@ -34,11 +34,16 @@ body{
 } 
 .custom-height {
   height: calc(100vh - (134px + 80px));
+  overflow-y: auto;
+}
+.contact-height{
+  height: calc(100%-134px - 80px);
 }
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
+
 * {
   -ms-overflow-style: none; /* IE and Edge */
 }

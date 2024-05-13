@@ -1,10 +1,12 @@
 import Circles from "../../components/Circles";
-import { BsArrowRight } from "react-icons/bs";
+import Bulb from "../../components/Bulb";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import EmailSent from "../../components/EmailSent";
+import { BsArrowRight } from "react-icons/bs";
+
 const Contact = () => {
   const [message, setMessage] = useState(
     "Hello! I would like to offer you to work for our company!"
@@ -32,73 +34,73 @@ const Contact = () => {
   };
 
   return (
-    <div className="xl:h-full custom-height bg-primary/30">
-      {showCheckmark && <EmailSent />}
-      <div className="container overflow-y-auto  custom-height mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        <div className="flex pt-7 xl:py-0 flex-col w-full max-w-[700px]">
-          <motion.h2
-            variants={fadeIn("up", 0.2)}
+    <div className="custom-height xl:h-full bg-primary/30 xl:py-36 flex items-center">
+      <Circles />
+      <div className="container mx-auto">
+        {showCheckmark && <EmailSent />}
+        <div className="flex justify-center custom-height overflow-y-auto pb-20 flex-col xl:flex-row gap-x-8">
+          <motion.div
+            variants={fadeIn("up", 0.3)}
             initial="hidden"
-            exit="hidden"
             animate="show"
-            className="h2 text-center mb-10">
-            Lets <span className="text-accent">connect.</span>
-          </motion.h2>
-          
-          <motion.form
-            variants={fadeIn("up", 0.4)}
-            initial="hidden"
             exit="hidden"
-            animate="show"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
-            onSubmit={handleSubmit}>
-            <div className="flex gap-x-6 w-full">
+            className="text-center flex xl:w-[30vw] pt-36 md:pt-8 flex-col lg:text-left mb-4 xl:mb-0">
+            <motion.h2 className="h2">
+              Let's <span className="text-accent">connect.</span>
+            </motion.h2>
+            <motion.form
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="flex-1 flex flex-col gap-4 md:gap-6 w-full mx-auto"
+              onSubmit={handleSubmit}>
+              <div className="flex flex-col md:flex-row gap-4 md:gap-x-6 w-full">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="input"
+                  name="name_from"
+                  required
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="input"
+                  name="email_from"
+                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+              </div>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="Subject"
                 className="input"
-                name="name_from"
-                required
                 onChange={(e) => {
-                  setName(e.target.value);
+                  setSubject(e.target.value);
                 }}
               />
-              <input
-                type="email"
-                placeholder="email"
-                className="input"
-                name="email_from"
-                required
+              <textarea
                 onChange={(e) => {
-                  setEmail(e.target.value);
+                  setMessage(e.target.value);
                 }}
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="subject"
-              className="input"
-              onChange={(e) => {
-                setSubject(e.target.value);
-              }}
-            />
-            <textarea
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              placeholder="message"
-              className="textarea"
-              name="message"
-              value={message}></textarea>
-            <button
-              
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex justify-center items-center overflow-hidden hover:border-accent group">
-              <span className=" translate-x-3.5 group-hover:-translate-y-[80%] group-hover:opacity-0 transition-all duration-500">
-                Lets talk
-              </span>
-              <BsArrowRight className="-translate-x-8 -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 text-[22px]" />
-            </button>
-          </motion.form>
+                placeholder="Message"
+                className="textarea"
+                name="message"
+                value={message}></textarea>
+              <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex justify-center items-center overflow-hidden hover:border-accent group">
+                <span className="translate-x-3.5 group-hover:-translate-y-[80%] group-hover:opacity-0 transition-all duration-500">
+                  Let's talk
+                </span>
+                <BsArrowRight className="-translate-x-8 -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 text-[22px]" />
+              </button>
+            </motion.form>
+          </motion.div>
         </div>
       </div>
     </div>
