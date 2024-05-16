@@ -46,7 +46,7 @@ const Contact = () => {
             exit="hidden"
             className="text-center flex xl:w-[30vw] pt-36 md:pt-8 flex-col lg:text-left mb-4 xl:mb-0">
             <motion.h2 className="h2">
-              Let's <span className="text-accent">connect.</span>
+              Let&apos;s <span className="text-accent">connect.</span>
             </motion.h2>
             <motion.form
               variants={fadeIn("up", 0.4)}
