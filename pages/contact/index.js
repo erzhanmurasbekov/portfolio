@@ -95,7 +95,7 @@ const Contact = () => {
                 value={message}></textarea>
               <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex justify-center items-center overflow-hidden hover:border-accent group">
                 <span className="translate-x-3.5 group-hover:-translate-y-[80%] group-hover:opacity-0 transition-all duration-500">
-                  Let's talk
+                  Let&apos;s talk
                 </span>
                 <BsArrowRight className="-translate-x-8 -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 text-[22px]" />
               </button>
