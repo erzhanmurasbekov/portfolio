@@ -7,6 +7,8 @@ import {
   FaReact,
   FaFigma,
 } from "react-icons/fa";
+import Tooltip from "@mui/material/Tooltip";
+import Button from "@mui/material/Button";
 import {
   SiNextdotjs,
   SiFramer,
@@ -35,20 +37,20 @@ const About = () => {
         {
           title: "Web Development",
           icons: [
-            <FaHtml5 key={uuidv4()} />,
-            <FaCss3 key={uuidv4()} />,
-            <FaJs key={uuidv4()} />,
-            <FaReact key={uuidv4()} />,
-            <SiNextdotjs key={uuidv4()} />,
-            <SiFramer key={uuidv4()} />,
+            {icon:<FaHtml5 key={uuidv4()} />, title:'HTML'},
+            {icon:<FaCss3 key={uuidv4()} />, title:'CSS'},
+            {icon:<FaJs key={uuidv4()} />, title:'JS'},
+            {icon:<FaReact key={uuidv4()} />, title:'React'},
+            {icon:<SiNextdotjs key={uuidv4()} />, title:'Next.js'},
+            {icon:<SiFramer key={uuidv4()} />, title:'Framer'},
           ],
         },
         {
           title: "UI/UX Design",
           icons: [
-            <FaFigma key={uuidv4()} />,
-            <SiAdobexd key={uuidv4()} />,
-            <SiAdobephotoshop key={uuidv4()} />,
+            {icon:<FaFigma key={uuidv4()} />,title:'Figma'},
+            {icon:<SiAdobexd key={uuidv4()} />,title:'AdobeXd'},
+            {icon:<SiAdobephotoshop key={uuidv4()} />,title:'Photoshop'},
           ],
         },
       ],
@@ -158,14 +160,18 @@ const About = () => {
                   <div
                     key={itemIndex}
                     className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
-                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                    <div className="font-light mb-2 md:mb-0 w-max">{item.title}</div>
                     <div className="hidden md:flex">-</div>
-                    <div className="">{item.stage}</div>
-                    <div className="flex gap-x-4">
+                    <div className="">{item?.stage}</div>
+                    <div className="flex -ml-6">
                       {item.icons?.map((icon, itemIndex) => {
                         return (
-                          <div className="text-2xl text-white" key={itemIndex}>
-                            {icon}
+                          <div className="w-[53px] h-[32px]" key={itemIndex}>
+                            <Tooltip title={icon.title}>
+                              <Button  className="text-xl px-0 text-white cursor-default">
+                                {icon.icon}
+                              </Button>
+                            </Tooltip>
                           </div>
                         );
                       })}
