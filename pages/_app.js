@@ -3,12 +3,18 @@ import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import Transition from "../components/Transition";
 
+
 import Layout from "../components/Layout";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
     <div>
+      <Head>
+        <title>ErzhanM Portfolio</title>
+        <link rel="icon" href='/cloud.png'/>
+      </Head>
       <div className="hidden lg:block w-1/4">
         <p className="absolute transform -rotate-90 bottom-2/4">
           Nope I didnt forget this part
