@@ -51,7 +51,7 @@ const WorkSlider = () => {
             <div className="grid grid-cols-2 grid-rows-2 gap-4">
               {slide.images.map((image, index) => {
                 return (
-                  <Link href={`${image.website}`} target="_blank">
+                  <Link href={`${image.website}`} key={index} target="_blank">
                     <div
                       key={index}
                       className="relative overflow-hidden flex items-center justify-center group">
