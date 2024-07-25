@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-} from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaWordpress } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import {
@@ -37,20 +31,19 @@ const About = () => {
         {
           title: "Web Development",
           icons: [
-            {icon:<FaHtml5 key={uuidv4()} />, title:'HTML'},
-            {icon:<FaCss3 key={uuidv4()} />, title:'CSS'},
-            {icon:<FaJs key={uuidv4()} />, title:'JS'},
-            {icon:<FaReact key={uuidv4()} />, title:'React'},
-            {icon:<SiNextdotjs key={uuidv4()} />, title:'Next.js'},
-            {icon:<SiFramer key={uuidv4()} />, title:'Framer'},
+            { icon: <FaHtml5 key={uuidv4()} />, title: "HTML" },
+            { icon: <FaCss3 key={uuidv4()} />, title: "CSS" },
+            { icon: <FaJs key={uuidv4()} />, title: "JS" },
+            { icon: <FaReact key={uuidv4()} />, title: "React" },
+            { icon: <SiNextdotjs key={uuidv4()} />, title: "Next.js" },
+            { icon: <FaWordpress key={uuidv4()} />, title: "Wordpress" },
           ],
         },
         {
           title: "UI/UX Design",
           icons: [
-            {icon:<FaFigma key={uuidv4()} />,title:'Figma'},
-            {icon:<SiAdobexd key={uuidv4()} />,title:'AdobeXd'},
-            {icon:<SiAdobephotoshop key={uuidv4()} />,title:'Photoshop'},
+            { icon: <FaFigma key={uuidv4()} />, title: "Figma" },
+            { icon: <SiAdobephotoshop key={uuidv4()} />, title: "Photoshop" },
           ],
         },
       ],
@@ -59,17 +52,14 @@ const About = () => {
       title: "experience",
       info: [
         {
-          title: "UX/UI Designer - XYZ Company",
-          stage: "2012 - 2023",
+          title: "Financial Analyst - 'Hunter Group'",
+          stage: "2020 - 2021",
         },
         {
-          title: "Web Developer - ABC Agency",
-          stage: "2010 - 2012",
+          title: "Front-end Developer - 'Samsara'",
+          stage: "2021 - present",
         },
-        {
-          title: "Intern - DEF Corporation",
-          stage: "2008 - 2010",
-        },
+        
       ],
     },
   ];
@@ -114,7 +104,7 @@ const About = () => {
                 </div>
                 <div className="mt-2 relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                    <CountUp start={0} end={50} duration={3} /> +
+                    <CountUp start={0} end={20} duration={3} /> +
                   </div>
                   <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                     Satisfied clients
@@ -160,16 +150,20 @@ const About = () => {
                   <div
                     key={itemIndex}
                     className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
-                    <div className="font-light mb-2 md:mb-0 w-max">{item.title}</div>
+                    <div className="font-light mb-2 md:mb-0 w-max">
+                      {item.title}
+                    </div>
                     <div className="hidden md:flex">-</div>
                     <div className="">{item?.stage}</div>
                     <div className="flex -ml-6">
                       {item.icons?.map((icon, itemIndex) => {
                         return (
                           <div className="w-[53px] h-[32px]" key={itemIndex}>
-                            <Tooltip title={icon.title}>
-                              <Button  className="text-xl px-0 text-white cursor-default">
-                                {icon.icon}
+                            <Tooltip title={icon.title} className="">
+                              <Button>
+                                {React.cloneElement(icon.icon, {
+                                  className: "text-white text-2xl",
+                                })}
                               </Button>
                             </Tooltip>
                           </div>
@@ -188,4 +182,3 @@ const About = () => {
 };
 
 export default About;
-

@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
+        <link rel="preload" href="/avatar.png" as="image" />
         <title>ErzhanM Portfolio</title>
         <link rel="icon" href='/cloud.png'/>
       </Head>
