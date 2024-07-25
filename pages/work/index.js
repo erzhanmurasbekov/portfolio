@@ -12,7 +12,7 @@ const Work = () => {
               tackled diverse challenges and collaborated with teams to bring
               innovative ideas to life.`;
   return (
-    <div className="custom-height xl:h-full bg-primary/30 py-36 flex items-center">
+    <div className="custom-height xl:h-full bg-primary/30 xl:py-36 flex items-center">
       <Circles />
       <div className="container mx-auto xl:pb-11">
         <div className="custom-height overflow-y-auto pb-20 flex flex-col xl:flex-row gap-x-8">
