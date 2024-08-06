@@ -10,7 +10,7 @@ import Link from "next/link";
 const workSlides = {
   slides: [
     {
-      title: "Cleaning company website",
+      title: "Cleaning company",
       path: "/thumb55.jpg",
       website: "https://aba-cleaning.netlify.app/",
     },
