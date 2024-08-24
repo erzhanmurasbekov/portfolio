@@ -15,15 +15,19 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [showCheckmark, setShowCheckmark] = useState(false);
+  const [send,setSend] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
+    if(send==false){
+      emailjs.sendForm(
       "service_ujgp8x8",
       "template_7czv69v",
       e.target,
       "DiYtUc-hEEZRGgzhB"
     );
+    } 
+    setSend(true)
     showAndHideCheckmark();
   };
   const showAndHideCheckmark = () => {
@@ -94,10 +98,11 @@ const Contact = () => {
                 name="message"
                 value={message}></textarea>
               <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex justify-center items-center overflow-hidden hover:border-accent group">
-                <span className="translate-x-3.5 group-hover:-translate-y-[80%] group-hover:opacity-0 transition-all duration-500">
+                {!send?<span className="translate-x-3.5 group-hover:-translate-y-[80%] group-hover:opacity-0 transition-all duration-500">
                   Let&apos;s talk
-                </span>
-                <BsArrowRight className="-translate-x-8 -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 text-[22px]" />
+                </span>:<span className="text-accent duration-300">Sent</span>}
+                
+                {!send&&<BsArrowRight className="-translate-x-8 -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 text-[22px]" />}
               </button>
             </motion.form>
           </motion.div>
