@@ -56,10 +56,13 @@ const About = () => {
           stage: "2018 - 2019",
         },
         {
-          title: "Front-end Developer - 'Samsara'",
-          stage: "2019 - present",
+          title: "Front-end Developer - 'Emplosoft'",
+          stage: "2020 - 2022",
         },
-        
+        {
+          title: "Front-end Developer - 'Samsara'",
+          stage: "2022 - present",
+        },
       ],
     },
   ];
